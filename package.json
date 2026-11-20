@@ -1,0 +1,19 @@
+{
+  "name": "telegram-task-planner-mydevil",
+  "version": "0.2.5",
+  "private": true,
+  "description": "Ukrainian Telegram planner for MyDevil FreeBSD, HTTPS webhooks and PostgreSQL",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.js",
+    "dev": "node --watch --env-file-if-exists=.env src/index.js",
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/planner.js && node --check src/store.js && node --check src/server.js && node --check src/time.js && node --check src/config.js && node --check src/telegram.js && node --check src/wizard.js && node --check src/ui.js && node --check src/access.js"
+  },
+  "dependencies": {
+    "pg-native": "3.9.1"
+  }
+}
